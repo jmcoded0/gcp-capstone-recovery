@@ -68,8 +68,8 @@ The project simulated a real-world scenario where a retail company, **Cymbal Ret
 
 ### Project Link  
 
-📌 **[View the full project on GitHub](YOUR_GITHUB_PROJECT_LINK_HERE)**  
+📌 **[View the full project on GitHub](https://github.com/jmcoded0/gcp-capstone-recovery/blob/main/documentation.md)**  
 
 ---  
 
-This should be good to copy and paste into your GitHub repo. Just replace `YOUR_GITHUB_PROJECT_LINK_HERE` with your actual GitHub project URL. Let me know if you want any modifications! 🚀
+ 🚀
