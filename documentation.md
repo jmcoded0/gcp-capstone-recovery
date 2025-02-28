@@ -51,7 +51,9 @@ These findings suggested that the instance was compromised and highly vulnerable
 
 While a direct screenshot of the Security Command Center's "Firewall Findings" is unavailable, the following screenshots demonstrate the steps taken to address the firewall vulnerabilities:
 
-<img width="960" alt="ss17" src="https://github.com/user-attachments/assets/01861c3d-641a-4217-8a8a-2602cf7c2fb3" />
+<img width="960" alt="ss18" src="https://github.com/user-attachments/assets/412d6205-c45c-4004-8bc4-867bc75628ab" />
+
+This screenshot shows the creation of the "limit-ports" firewall rule. This rule restricts SSH access to instances tagged with "cc" from the IP range 35.235.240.0/20, which is used by Google Cloud's Identity-Aware Proxy (IAP). This rule was created to replace the overly permissive default SSH rule.
 
 The firewall configuration was modified to restrict access to critical ports and enable logging. Specific actions included:
 
@@ -74,8 +76,41 @@ The project simulated a real-world scenario where a retail company, Cymbal Retai
 
 The following tests were performed to validate the remediation efforts:
 
+<img width="960" alt="ss19" src="https://github.com/user-attachments/assets/9f2c0195-0b82-4f7a-9507-cde0bf9aceab" />
+
+This screenshot shows the updated PCI DSS 3.2.1 compliance report after the remediation steps were completed. It confirms that the high-severity findings related to open RDP and SSH ports, public bucket ACLs, and VMs with public IP addresses have been successfully addressed.
+
 * Verified the successful creation and configuration of the new VM.
 * Confirmed the removal of public access and restricted permissions on the Cloud Storage bucket.
 * Tested SSH access to the new VM from authorized IP addresses.
 * Verified the deletion of overly permissive firewall rules and the enabling of logging.
 * Confirmed that the PCI DSS 3.2.1 report showed that the vulnerabilities were remediated.
+
+## Security Considerations
+
+The following security considerations were implemented:
+
+* Implemented least privilege principle by creating a new VM without a default service account.
+* Restricted network access by limiting firewall ports.
+* Ensured data security by revoking public access to the Cloud Storage bucket.
+* Used snapshots to recover compromised systems.
+* Enabled logging on firewall rules to track network traffic.
+* Ensured secure boot was enabled.
+
+## Conclusion
+
+This project successfully simulated a data breach scenario and demonstrated the ability to respond to and recover from such incidents within a Google Cloud environment. By identifying and remediating vulnerabilities, isolating and containing the breach, and recovering compromised systems, the project achieved its objectives. The successful verification of compliance with the PCI DSS 3.2.1 standard further validated the effectiveness of the implemented security measures.
+
+## Lessons Learned
+
+* The importance of regular security audits and vulnerability assessments.
+* The significance of implementing the principle of least privilege.
+* The need for robust network security configurations.
+* The effectiveness of using snapshots for system recovery.
+* The importance of logging.
+* The need to ensure secure boot is enabled.
+
+## Future Improvements
+
+* Implement automated security monitoring and alerting.
+*
