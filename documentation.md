@@ -49,8 +49,6 @@ These findings suggested that the instance was compromised and highly vulnerable
 
 ### Firewall Configuration and Remediation
 
-While a direct screenshot of the Security Command Center's "Firewall Findings" is unavailable, the following screenshots demonstrate the steps taken to address the firewall vulnerabilities:
-
 <img width="960" alt="ss18" src="https://github.com/user-attachments/assets/412d6205-c45c-4004-8bc4-867bc75628ab" />
 
 This screenshot shows the creation of the "limit-ports" firewall rule. This rule restricts SSH access to instances tagged with "cc" from the IP range 35.235.240.0/20, which is used by Google Cloud's Identity-Aware Proxy (IAP). This rule was created to replace the overly permissive default SSH rule.
@@ -113,4 +111,12 @@ This project successfully simulated a data breach scenario and demonstrated the 
 ## Future Improvements
 
 * Implement automated security monitoring and alerting.
-*
+* Conduct regular penetration testing to identify potential vulnerabilities.
+* Develop and implement incident response plans.
+* Automate snapshots.
+* Implement more granular IAM permissions.
+* Implement Intrusion Detection and Prevention Systems (IDPS).
+* Regularly update and patch systems and applications.
+* Implement multi-factor authentication (MFA) for all users.
+* Implement data loss prevention (DLP) measures.
+* Conduct regular security awareness training for employees.
