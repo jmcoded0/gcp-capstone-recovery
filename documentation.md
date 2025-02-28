@@ -53,7 +53,6 @@ While a direct screenshot of the Security Command Center's "Firewall Findings" i
 
 <img width="960" alt="ss17" src="https://github.com/user-attachments/assets/01861c3d-641a-4217-8a8a-2602cf7c2fb3" />
 
-
 The firewall configuration was modified to restrict access to critical ports and enable logging. Specific actions included:
 
 * Creating a new firewall rule to restrict SSH access to authorized IP addresses.
@@ -61,3 +60,22 @@ The firewall configuration was modified to restrict access to critical ports and
 * Enabling logging for remaining firewall rules to track network traffic.
 
 These actions were taken to mitigate the risk of unauthorized access and improve network visibility.
+
+## Project Architecture
+
+The project simulated a real-world scenario where a retail company, Cymbal Retail, experienced a data breach. The architecture involved:
+
+* A compromised Compute Engine virtual machine (VM) that was used to access sensitive data.
+* A publicly accessible Cloud Storage bucket containing sensitive information.
+* VPC firewall rules that allowed overly permissive access to the network.
+* Security Command Center to identify and view vulnerabilities.
+
+## Testing and Validation
+
+The following tests were performed to validate the remediation efforts:
+
+* Verified the successful creation and configuration of the new VM.
+* Confirmed the removal of public access and restricted permissions on the Cloud Storage bucket.
+* Tested SSH access to the new VM from authorized IP addresses.
+* Verified the deletion of overly permissive firewall rules and the enabling of logging.
+* Confirmed that the PCI DSS 3.2.1 report showed that the vulnerabilities were remediated.
